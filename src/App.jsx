@@ -1,5 +1,6 @@
-function App() {
 const title = 'React!';
+
+function App() {
 
   return (
     <div>
