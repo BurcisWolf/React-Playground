@@ -4,11 +4,6 @@ const welcome = {
   name: "React!",
 };
 
-//Defining JavaScript Funktion
-function welcomeMessage(name){
-  return "Welcome in our course, lets be best Mr./ Mrs. " + name;
-}
-
 const title = "React";
 const myElement = <h2>Hello {title}</h2>; // JSX 
 const number = [1, 2, 4, 8, 16, 32];
@@ -36,7 +31,7 @@ const list = [{
   points: 2,
   objectID: 1,
 }];
-// FUnktion for our list so we dont need to edit App()
+// FUnktion for our list so we dont need to edit App() ... React Component
 function List() {
   return (
     <ul>
@@ -53,7 +48,7 @@ function List() {
     })}
     </ul>
   )}
-// Funktion for our search so we dont need to edit App()
+// Funktion for our search so we dont need to edit App() ... React Component
 function Search() {
   return (  
     <div>    
