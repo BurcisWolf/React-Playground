@@ -31,6 +31,48 @@ const list = [{
   points: 2,
   objectID: 1,
 }];
+// Funktion for our search so we dont need to edit App() ... React Component
+function Search() {
+  return (  
+    <div>    
+      <label htmlFor="search">Search: </label>
+      <input id="search" type="text"/>
+    </div>  
+  )
+}
+
+class Person { 
+  constructor(firstName, lastName, age){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+  getInfo() {
+    return 'Name: ' + this.firstName + ' ' + this.lastName + ', Age: ' + this.age;
+}}
+const robit = new Person('Robin', 'Peterson', 28);
+const bilbo = new Person('Bilbo', 'Sourek', 250);
+console.log(robit.getInfo());
+console.log(bilbo.getInfo());
+
+function App() {
+  return (
+    <div>
+      <h1>{welcome.greeting} {welcome.name}</h1>
+      <Search />
+    <hr />
+      <List />
+    <hr />
+      <List2 />
+    </div>
+  )
+}
+function List2() {
+  return (
+    <p>{robit.getInfo() + ' | ' + bilbo.getInfo()}</p>
+  )
+}
+
 // FUnktion for our list so we dont need to edit App() ... React Component
 function List() {
   return (
@@ -48,24 +90,4 @@ function List() {
     })}
     </ul>
   )}
-// Funktion for our search so we dont need to edit App() ... React Component
-function Search() {
-  return (  
-    <div>    
-      <label htmlFor="search">Search: </label>
-      <input id="search" type="text"/>
-    </div>  
-  )
-}
-function App() {
-  return (
-    <div>
-      <h1>{welcome.greeting} {welcome.name}</h1>
-      <Search />
-    <hr />
-      <List />
-    </div>
-  )
-}
-
 export default App
