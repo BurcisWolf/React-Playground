@@ -33,7 +33,8 @@ const list = [{
 }];
 // Funktion for our search so we dont need to edit App() ... React Component
 const Search = () => {
-  return (  
+  //perform tasks between
+  return(
     <div>    
       <label htmlFor="search">Search: </label>
       <input id="search" type="text"/>
@@ -64,21 +65,25 @@ const App = () => {
       <List />
     <hr />
       <List2 />
+      <hr />
+      <List3 />
     </div>
   )
 }
+// BEFORE
 const List2 = () => {
   return (
     <p>{robit.getInfo() + ' | ' + bilbo.getInfo()}</p>
   )
 }
+//AFTER
+const List3 = () => (<p>{robit.getInfo() + ' | ' + bilbo.getInfo()}</p>)
 
 // FUnktion for our list so we dont need to edit App() ... React Component
 const List = () => {
   return (
     <ul>
-    {list.map(function (item) {
-      return (
+    {list.map((item) => (
       <li key={item.objectID}>
         <span><a href={item.url}>{item.title}</a> |</span>
         <span> About: {item.about} |</span>
@@ -87,7 +92,7 @@ const List = () => {
         <span> Number of commnents: {item.num_comments}</span>
         </li>
         )
-    })}
+    )}
     </ul>
   )}
 export default App
