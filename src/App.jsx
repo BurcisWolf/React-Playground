@@ -32,7 +32,7 @@ const list = [{
   objectID: 1,
 }];
 // Funktion for our search so we dont need to edit App() ... React Component
-function Search() {
+const Search = () => {
   return (  
     <div>    
       <label htmlFor="search">Search: </label>
@@ -55,7 +55,7 @@ const bilbo = new Person('Bilbo', 'Sourek', 250);
 console.log(robit.getInfo());
 console.log(bilbo.getInfo());
 
-function App() {
+const App = () => {
   return (
     <div>
       <h1>{welcome.greeting} {welcome.name}</h1>
@@ -67,14 +67,14 @@ function App() {
     </div>
   )
 }
-function List2() {
+const List2 = () => {
   return (
     <p>{robit.getInfo() + ' | ' + bilbo.getInfo()}</p>
   )
 }
 
 // FUnktion for our list so we dont need to edit App() ... React Component
-function List() {
+const List = () => {
   return (
     <ul>
     {list.map(function (item) {
