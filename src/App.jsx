@@ -34,10 +34,17 @@ const list = [{
 // Funktion for our search so we dont need to edit App() ... React Component
 const Search = () => {
   //perform tasks between
+  const handleChange = (event) => {
+    // probabaly used for some counting operation of if we want to know what user types in and use it for something.
+    console.log(event.target.value); // what was input value
+    console.log(event.target); // where we wrote it
+    console.log(event.target.id); // what is the ID of html element
+    console.log(event.target.type); // what type of it is
+  };
   return(
     <div>    
       <label htmlFor="search">Search: </label>
-      <input id="search" type="text"/>
+      <input id="search" type="text" onChange={handleChange}/>
     </div>  
   )
 }
